@@ -1,0 +1,196 @@
+/*ini buat apply font dari google font*/
+
+/*css buat disable horizontal scroll soalnya ada glitch gj. Sumber : https://stackoverflow.com/questions/17756649/disable-the-horizontal-scroll*/
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/*ini css carousel dari BootstrapCreative. Sumber : https://bootstrapcreative.com/pattern/full-width-carousel-responsive-images/*/
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+/*
+Removes white gap between slides - chagnge to base color of slide images
+*/
+.carousel {
+    background:#fff;
+    padding: 0px;
+}
+
+/*
+Forces image to be 100% width and not max width of 100%
+*/
+.carousel-item .img-fluid {
+    width:100%;
+}
+
+/* 
+anchors are inline so you need ot make them block to go full width
+*/
+.carousel-item a {
+    display: block;
+    width:100%;
+}
+
+* {
+    font-size: 100%;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+}
+
+/*ini custom css navbar hasil experiment edit edit pake inspect element, belajar dari sensei falih naufal*/
+.logo{
+    font-size: 150%;
+    font-family: 'Work Sans', sans-serif; 
+    font-style: italic;
+    font-weight: 700;
+}
+.navbar {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1.25rem 1rem;
+    box-shadow: 10px 10px 37px 0px rgba(0,0,0,0.26);
+    -webkit-box-shadow: 10px 10px 37px 0px rgba(0,0,0,0.26);
+    -moz-box-shadow: 10px 10px 37px 0px rgba(0,0,0,0.26);
+}
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 3rem;
+    margin-left: 2rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+.navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    margin-right: 1.5rem;
+}
+.btn {
+    border-radius: 2rem;
+    padding: 0.5rem 0.9rem;
+}
+
+/*ini teh margin icon*/
+.me-4 {
+    margin-right: 1.5rem!important;
+}
+
+/* ini css scroll bar custom dari Nicola Spadari. Sumber : https://codepen.io/nicolaspadari/pen/eLMwzb */
+::-webkit-scrollbar {
+    width: .45rem;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(27, 27, 27, .4);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+#scroll{
+    opacity: .7;
+}
+
+a {
+    text-decoration: none!important;
+}
+
+/*custom css text box*/
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    /* background-color: #fff; */
+    /* background-clip: padding-box; */
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ced4da!important;
+    border-radius: 0px!important;
+    /* transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; */
+}
+
+.inp {
+    border:none;
+    border-bottom: 1px solid #1890ff;
+    padding: 5px 10px;
+    outline: none;
+ }
+
+.form-elegant .font-small {
+    font-size: 0.8rem; }
+
+/*.form-elegant .z-depth-1a {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
+    box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25); 
+}*/
+
+.form-elegant .z-depth-1-half,
+/*.form-elegant .btn:hover {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
+    box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
+*/
+.form-elegant .modal-header {
+    border-bottom: none; }
+
+.modal-dialog .form-elegant .btn .fab {
+    color: #2196f3!important; }
+
+.form-elegant .modal-body, .form-elegant .modal-footer {
+    font-weight: 400; 
+}
+
+/**/
+
+.modal-content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: unset!important;
+    border: 0px solid rgba(0,0,0,.2)!important; 
+    border-radius: 0rem!important;
+    outline: 0;
+}
+.modal-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    padding-bottom: 0.75rem!important;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(0.3rem - 1px);
+    border-top-right-radius: calc(0.3rem - 1px);
+}
+
+.modal-dialog {
+    max-width: 450px;
+    margin: 1.75rem auto;
+}
+
+.f14 {
+    font-size: 14px!important;
+}

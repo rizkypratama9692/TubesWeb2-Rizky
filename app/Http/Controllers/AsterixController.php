@@ -10,4 +10,9 @@ class AsterixController extends Controller
         return view ('asterix.index');
         // echo "ini teh index";
     }
+
+    public function toko() {
+        return view ('asterix.toko');
+        // echo "ini teh index";
+    }
 }

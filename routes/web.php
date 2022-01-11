@@ -16,6 +16,11 @@ Route::get('/', function () {
 });
 
 // Route::get('/asterix', 'AsterixController@index');
-Route::resource('/asterix', AsterixController::class);
+// Route::get('barang/add', [BarangController::class, 'add']);
+// Route::get('asterix', [AsterixController::class, 'index']);
+// Route::get('asterix/toko', [AsterixController::class, 'toko']);
 
+// Route::resource('asterix', AsterixController::class);
+Route::get('/asterix', 'AsterixController@index');
+Route::get('/asterix/toko', 'AsterixController@toko');
 ?>
