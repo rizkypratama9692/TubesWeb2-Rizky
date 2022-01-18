@@ -203,176 +203,159 @@ a {
 .f14 {
     font-size: 14px!important;
 }
-
-
 </style>
-
-<!-- ini css product list dari :  -->
+<!-- css buat list produk dari : https://bootsnipp.com/snippets/R5r9A -->
 <style type="text/css">
-	body {
-    background-color: #fff;
-    color: #000;
-    overflow-x: hidden
-}
+    .card-product .img-wrap {
+        border-radius: 3px 3px 0 0;
+        overflow: hidden;
+        position: relative;
+        height: 220px;
+        text-align: center;
+    }
+    .card-product .img-wrap img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+    .card-product .info-wrap {
+        overflow: hidden;
+        padding: 15px;
+        border-top: 1px solid #eee;
+    }
+    .card-product .bottom-wrap {
+        padding: 15px;
+        border-top: 1px solid #eee;
+    }
 
-.card {
-    margin: auto;
-    padding: 20px;
-    border-radius: 15px;
-    margin-top: 50px;
-    margin-bottom: 50px
-}
+    .label-rating { margin-right:10px;
+        color: #333;
+        display: inline-block;
+        vertical-align: middle;
+    }
 
-.like {
-    color: #CFD8DC
-}
-
-.like-checked {
-    color: #E53935
-}
-
-.like:hover {
-    color: #E53935;
-    cursor: pointer
-}
-
-.pic1 {
-    width: 90%;
-    height: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block
-}
-
-.pic2 {
-    width: 70%;
-    height: 180px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block
-}
-
-.pic3 {
-    width: 70%;
-    height: 180px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block
-}
-
-.product-pic {
-    padding-left: auto;
-    padding-right: auto;
-    width: 100%;
-    height: 180px
-}
-
-.card-1 {
-    padding: 0px 30px 0px 30px !important;
-    border: none
-}
-
-.category {
-    padding-top: 25px;
-    color: grey
-}
-
-.product-name {
-    padding-bottom: 15px
-}
-
-.price {
-    font-size: 18px
-}
-
-.star-active {
-    color: #FFCA28 !important
-}
-
-.fa-star {
-    color: #CFD8DC;
-    cursor: pointer
-}
+    .card-product .price-old {
+        color: #999;
+    }
 </style>
-<!-- <aside style="padding-left:0px!important;" class="col-sm-3 flex-grow-sm-1 flex-shrink-1 flex-grow-0 sticky-top pb-sm-0 pb-3">
-    <div class="bg-light border rounded-3 p-1 h-100 sticky-top">
-        <ul class="nav nav-pills flex-sm-column flex-row mb-auto justify-content-between ">
-            <li class="nav-item">
-                <a href="#" class="nav-link px-2 ">
-                    <i class="bi bi-house fs-5"></i>
-                    <span class="d-none d-sm-inline">Studio</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="nav-link px-2">
-                    <i class="bi bi-speedometer fs-5"></i>
-                    <span class="d-none d-sm-inline">Alat Musik</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="nav-link px-2 "><i class="bi bi-card-text fs-5"></i>
-                    <span class="d-none d-sm-inline">Alat Studio</span> </a>
-            </li>
-        </ul>
-    </div>
-</aside> -->
 
-<div class="container-fluid px-1 py-5 mx-auto">
-    <div class="row justify-content-center">
-        <div class="col-md-10 col-sm-9">
-            <div class="card">
-                <div class="row">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card card-1">
-                            <!-- <div class="pr-3 row justify-content-end">
-                                <div class="fa fa-heart like like-checked"></div>
-                            </div> -->
-                            <div class="product-pic"> <img class="pic1" src="https://i.imgur.com/EaNHGjT.png"> </div> <small class="category">//kategori</small>
-                            <h5 class="product-name">//nama</h5>
-                            <div class="row px-3 justify-content-between">
-                                <p class="price">//harga</p>
-                                <div class="stars"> 
-                                	<!-- <span class="fa fa-star star-active"></span> <span class="fa fa-star star-active"></span> <span class="fa fa-star star-active"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>  -->
-                                	<p class="price">//status pinjam</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card card-1">
-                            <!-- <div class="pr-3 row justify-content-end">
-                                <div class="fa fa-heart like"></div>
-                            </div> -->
-                            <div class="product-pic"> <img class="pic2" src="https://i.imgur.com/Yyi0L3k.jpg"> </div> <small class="category">//kategori</small>
-                            <h5 class="product-name">//nama</h5>
-                            <div class="row px-3 justify-content-between">
-                                <p class="price">//int_harga</p>
-                                <div class="stars"> 
-                                	<!-- <span class="fa fa-star star-active"></span> <span class="fa fa-star star-active"></span> <span class="fa fa-star star-active"></span> <span class="fa fa-star star-active"></span> <span class="fa fa-star"></span>  -->
-                                	<p class="price"> //Status pinjam</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card card-1">
-                            <!-- <div class="pr-3 row justify-content-end">
-                                <div class="fa fa-heart like"></div>
-                            </div> -->
-                            <div class="product-pic"> <img class="pic3" src="https://i.imgur.com/pZOAATT.jpg"> </div> <small class="category">//kategori</small>
-                            <h5 class="product-name">//nama</h5>
-                            <div class="row px-3 justify-content-between">
-                                <p class="price">//harga</p>
-                                <div class="stars"> 
-                                	<p class="price">//status pinjam</p>
-                                	<!-- <span class="fa fa-star star-active"></span> <span class="fa fa-star star-active"></span> <span class="fa fa-star star-active"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>  -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<div class="row border-bottom">
+<!--     <div style="flex: 0 0 19%!important; max-width: 19%!important;" class="p-0">
+        <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" >
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item">
+                <a href="https://getbootstrap.com/docs/5.1/examples/sidebars/#" class="nav-link active" aria-current="page">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="https://getbootstrap.com/docs/5.1/examples/sidebars/#" class="nav-link link-dark">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a href="https://getbootstrap.com/docs/5.1/examples/sidebars/#" class="nav-link link-dark">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                  Orders
+                </a>
+              </li>
+              <li>
+                <a href="https://getbootstrap.com/docs/5.1/examples/sidebars/#" class="nav-link link-dark">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                  Products
+                </a>
+              </li>
+              <li>
+                <a href="https://getbootstrap.com/docs/5.1/examples/sidebars/#" class="nav-link link-dark">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+                  Customers
+                </a>
+              </li>
+            </ul>
+            <hr>
+            <div class="dropdown">
+              <a href="https://getbootstrap.com/docs/5.1/examples/sidebars/#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="./Sidebars · Bootstrap v5.1_files/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong>mdo</strong>
+              </a>
+              <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                <li><a class="dropdown-item" href="https://getbootstrap.com/docs/5.1/examples/sidebars/#">New project...</a></li>
+                <li><a class="dropdown-item" href="https://getbootstrap.com/docs/5.1/examples/sidebars/#">Settings</a></li>
+                <li><a class="dropdown-item" href="https://getbootstrap.com/docs/5.1/examples/sidebars/#">Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="https://getbootstrap.com/docs/5.1/examples/sidebars/#">Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+    </div> -->
+    <div class="p-0 col">
+        <section class="container justify-content-center justify-content-lg-between p-5">
+
+            <div class="row justify-content-center">
+                <div class="span2 mx-2">
+                    <figure class="card card-product">
+                        <div class="img-wrap"><img src="https://s9.postimg.org/tupxkvfj3/image.jpg"></div>
+                        <figcaption class="info-wrap">
+                                <h5 class="title">Another name of item</h5>
+                                <h7 class="desc">Some small description goes here</h7>
+                                <!-- <div class="rating-wrap">
+                                    <div class="label-rating">132 reviews</div>
+                                    <div class="label-rating">154 orders </div>
+                                </div> -->
+                        </figcaption>
+                        <div class="bottom-wrap">
+                            <a href="" class="btn btn-sm btn-primary float-right">Order Now</a> 
+                            <div class="price-wrap h7">
+                                <span class="price-new">$1280</span> <del class="price-old">$1980</del>
+                            </div> 
+                        </div> 
+                    </figure>
+                </div>
+                <div class="span2 mx-2">
+                    <figure class="card card-product">
+                        <div class="img-wrap"><img src="https://s9.postimg.org/tupxkvfj3/image.jpg"></div>
+                        <figcaption class="info-wrap">
+                                <h5 class="title">Another name of item</h5>
+                                <h7 class="desc">Some small description goes here</h7>
+                                <!-- <div class="rating-wrap">
+                                    <div class="label-rating">132 reviews</div>
+                                    <div class="label-rating">154 orders </div>
+                                </div> -->
+                        </figcaption>
+                        <div class="bottom-wrap">
+                            <a href="" class="btn btn-sm btn-primary float-right">Order Now</a> 
+                            <div class="price-wrap h7">
+                                <span class="price-new">$1280</span> <del class="price-old">$1980</del>
+                            </div> 
+                        </div> 
+                    </figure>
+                </div>
+                <div class="span2 mx-2">
+                    <figure class="card card-product">
+                        <div class="img-wrap"><img src="https://s9.postimg.org/tupxkvfj3/image.jpg"></div>
+                        <figcaption class="info-wrap">
+                                <h5 class="title">Another name of item</h5>
+                                <h7 class="desc">Some small description goes here</h7>
+                                <!-- <div class="rating-wrap">
+                                    <div class="label-rating">132 reviews</div>
+                                    <div class="label-rating">154 orders </div>
+                                </div> -->
+                        </figcaption>
+                        <div class="bottom-wrap">
+                            <a href="" class="btn btn-sm btn-primary float-right">Order Now</a> 
+                            <div class="price-wrap h7">
+                                <span class="price-new">$1280</span> <del class="price-old">$1980</del>
+                            </div> 
+                        </div> 
+                    </figure>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 </div>
+
+<!-- list product dari https://bootsnipp.com/snippets/R5r9A -->
+
 @endsection
