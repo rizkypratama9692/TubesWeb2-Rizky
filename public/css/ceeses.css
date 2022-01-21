@@ -36,6 +36,7 @@ anchors are inline so you need ot make them block to go full width
     width:100%;
 }
 
+/* css buat apply font dari google font */
 * {
     font-size: 100%;
     font-family: 'Work Sans', sans-serif;
@@ -214,7 +215,7 @@ a {
     text-align: center;
 }
 .card-product .img-wrap img {
-    max-height: 100%;
+    /* max-height: 100%; */
     max-width: 100%;
     object-fit: cover;
 }

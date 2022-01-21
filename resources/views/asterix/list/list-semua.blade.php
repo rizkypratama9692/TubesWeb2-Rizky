@@ -2,7 +2,7 @@
 @php
 $i=1;
 @endphp
-@foreach($dataAlatMusik as $datas)
+@foreach($dataSemua as $datas)
     
         {{-- {{/*$i*/}} --}}
         {{-- {{/*$datas['jenis_item']*/}} --}}

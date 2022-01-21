@@ -1,4 +1,4 @@
-<div class="row justify-content-center">
+<div class="row">
 @php
 $i=1;
 @endphp
@@ -11,7 +11,7 @@ $i=1;
         {{-- {{/*$datas['harga_item']*/}} --}}
         {{-- {{/* $datas['deskripsi_item'] */}} --}}
 
-    <div class="col-4 ">
+    <div data-bs-toggle="modal" data-bs-target="#modal-form" class="col-4 ">
         <figure class="card card-product">
             <div class="img-wrap"><img src={{ asset('img/'.$datas['gambar_item']) }}></div>
             <figcaption class="info-wrap">
@@ -22,8 +22,9 @@ $i=1;
                         <div class="label-rating">154 orders </div>
                     </div> -->
             </figcaption>
-            <div class="bottom-wrap">
-                <a href="" class="btn btn-sm btn-primary float-right">Order Now</a> 
+            <div class="bottom-wrap d-flex justify-content-between align-items-center">
+                <!-- <a href="#" class="btn btn-sm btn-primary float-right">Order Now</a>  -->
+                <h6 class="badge badge-primary">{{$datas['status_item']==0? 'Tersedia' : 'Dipinjam' }}</h6>
                 <div class="price-wrap h7">
                     <span class="price-new">Rp. {{$datas['harga_item']}}</span> 
                     <!-- <del class="price-old">$1980</del> -->
@@ -32,3 +33,4 @@ $i=1;
         </figure>
     </div>
 @endforeach
+</div>

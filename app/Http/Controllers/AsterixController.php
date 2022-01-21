@@ -13,6 +13,7 @@ class AsterixController extends Controller
     }
 
     public function toko() {
+        $semua = item::cursorPaginate(6);
         $ruangStudio = item::where('jenis_item', 'Ruang Studio')->get();
         $alatStudio = item::where('jenis_item', 'Alat Studio')->get();
         $alatMusik = item::where('jenis_item', 'Alat Musik')->get();
@@ -23,6 +24,7 @@ class AsterixController extends Controller
         // ];
         
         return view ('asterix.toko', [
+            "dataSemua" => $semua,
             "dataRuangStudio" => $ruangStudio,
             "dataAlatStudio" => $alatStudio,
             "dataAlatMusik" => $alatMusik

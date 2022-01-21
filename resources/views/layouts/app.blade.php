@@ -23,6 +23,7 @@
     <body>
         <!-- navbar Start -->
         <nav class="navbar navbar-expand-md navbar-light bg-white">
+          <div class="container-fluid">
             <a href="/" class="navbar-brand logo">Asterix Studio &#9834;</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar6">
                 <span class="navbar-toggler-icon"></span>
@@ -42,10 +43,11 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <!-- <a style="margin-right:1rem;" class="btn btn-outline-dark" href="#">Login</a> -->
-                        <button style="margin-right:1rem;" type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#modal-login">Login</button>
+                        <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#modal-login">Login</button>
                     </li>
                 </ul>
             </div>
+          </div>
         </nav>
         <!-- navbar END -->
             <!--  -->
@@ -192,38 +194,39 @@
               </div>
             </div>
             <!--  -->
-            @yield("content")
+        @yield("content")
 
         <!-- ini custom footer dari MDBootstrap. Sumber : https://mdbootstrap.com/docs/standard/navigation/footer/ -->
         <footer class="text-lg-start bg-white text-muted">
           <!-- Section: Social media -->
-          <section class="d-flex justify-content-center justify-content-lg-between p-4 border-top border-bottom">
-            <!-- Left -->
-            <div style="margin-left: 1.25rem !important;" class="me-5 d-none d-lg-block">
-              <span>Ayo terhubung dengan kami!</span>
+          <section class="border-top border-bottom py-4 px-5">
+            <div class="container-fluid">
+              <div class="row justify-content-between">
+                <div class="col">
+                  <div class="me-5 d-none d-lg-block">
+                    <span>Ayo terhubung dengan kami!</span>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <a href="https://www.facebook.com/pages/category/Local-Business/Studio-Musik-Asterik-700439320110883/" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="https://www.google.co.id/search?q=studio+asterix+margahayu&bih=760&biw=1598&hl=en&sxsrf=AOaemvJiEL_5b1Zxr811JG7Dcsgr4_5e8w%3A1640981857065&ei=YWXPYauqA4bYz7sPkdCS2Ag&oq=studio+asterix+marga&gs_lcp=Cgdnd3Mtd2l6EAMYADIGCAAQFhAeOgQIIxAnOgUIABCRAjoICAAQgAQQsQM6CAgAELEDEIMBOgUIABCABDoECAAQQzoLCAAQgAQQsQMQgwE6BwguENQCEEM6BAguEEM6BAgAEAM6CAgAEIAEEIsDOg4IABCABBCxAxCDARCLAzoICC4QgAQQiwM6BQgAEMsBOggIABCxAxCRAjoHCAAQsQMQQzoHCCMQ6gIQJzoOCC4QgAQQsQMQxwEQ0QM6BQguEIAEOgUIABCxAzoKCC4QxwEQowIQQzoNCC4QsQMQxwEQ0QMQQzoLCAAQgAQQsQMQiwM6CwguEMcBEK8BEMsBOggIABDLARCLAzoRCC4QgAQQxwEQrwEQ1AIQiwM6DgguEIAEEMcBEK8BEIsDOgsILhCABBDHARCvAToKCAAQgAQQhwIQFDoKCC4QxwEQ0QMQCjoECAAQCjoHCAAQChDLAToICAAQFhAKEB46AggmSgQIQRgASgQIRhgAUABY6iVgiSxoB3ACeACAAZcBiAGsE5IBBDIwLjeYAQCgAQGwAQq4AQLAAQE&sclient=gws-wiz" class="me-4 text-reset">
+                    <i class="fab fa-google"></i>
+                  </a>
+                </div>
+              </div>
             </div>
-            <!-- Left -->
-
-            <!-- Right -->
-            <div>
-              <a href="https://www.facebook.com/pages/category/Local-Business/Studio-Musik-Asterik-700439320110883/" class="me-4 text-reset">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="https://www.google.co.id/search?q=studio+asterix+margahayu&bih=760&biw=1598&hl=en&sxsrf=AOaemvJiEL_5b1Zxr811JG7Dcsgr4_5e8w%3A1640981857065&ei=YWXPYauqA4bYz7sPkdCS2Ag&oq=studio+asterix+marga&gs_lcp=Cgdnd3Mtd2l6EAMYADIGCAAQFhAeOgQIIxAnOgUIABCRAjoICAAQgAQQsQM6CAgAELEDEIMBOgUIABCABDoECAAQQzoLCAAQgAQQsQMQgwE6BwguENQCEEM6BAguEEM6BAgAEAM6CAgAEIAEEIsDOg4IABCABBCxAxCDARCLAzoICC4QgAQQiwM6BQgAEMsBOggIABCxAxCRAjoHCAAQsQMQQzoHCCMQ6gIQJzoOCC4QgAQQsQMQxwEQ0QM6BQguEIAEOgUIABCxAzoKCC4QxwEQowIQQzoNCC4QsQMQxwEQ0QMQQzoLCAAQgAQQsQMQiwM6CwguEMcBEK8BEMsBOggIABDLARCLAzoRCC4QgAQQxwEQrwEQ1AIQiwM6DgguEIAEEMcBEK8BEIsDOgsILhCABBDHARCvAToKCAAQgAQQhwIQFDoKCC4QxwEQ0QMQCjoECAAQCjoHCAAQChDLAToICAAQFhAKEB46AggmSgQIQRgASgQIRhgAUABY6iVgiSxoB3ACeACAAZcBiAGsE5IBBDIwLjeYAQCgAQGwAQq4AQLAAQE&sclient=gws-wiz" class="me-4 text-reset">
-                <i class="fab fa-google"></i>
-              </a>
-            </div>
-            <!-- Right -->
           </section>
           <!-- Section: Social media -->
 
           <!-- Section: Links  -->
-          <section class="">
-            <div class="container text-md-start mt-5 mb-3">
+          <section class="container-fluid">
+            <div class="mt-5 mb-3 px-5">
               <!-- Grid row -->
               <div class="row mt-3">
                 <!-- Grid column -->
-                <div style="margin-left: 3rem !important;" class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <div class="col-md-3 mx-auto mb-4">
                   <!-- Content -->
                   <h6 class="text-uppercase fw-bold mb-4">
                     <i class="fas fa-music me-3"></i> Asterix Music Studio
@@ -235,7 +238,7 @@
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <div class="col-md-2 mx-auto mb-4">
                   <!-- Links -->
                   <h6 class="text-uppercase fw-bold mb-4">
                     Sewa
@@ -253,7 +256,7 @@
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <div class="col-md-3 mx-auto mb-4">
                   <!-- Links -->
                   <h6 class="text-uppercase fw-bold mb-4">
                     Info
@@ -274,7 +277,7 @@
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div style="margin-right: 3rem !important;" class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <div class="col-md-4 mx-auto mb-md-0 mb-4">
                   <!-- Links -->
                   <h6 class="text-uppercase fw-bold mb-4">
                     Contact
