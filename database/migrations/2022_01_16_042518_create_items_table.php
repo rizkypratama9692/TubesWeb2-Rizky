@@ -17,7 +17,10 @@ class CreateItemsTable extends Migration
             $table->bigIncrements('id');
             $table->string('jenis_item');
             $table->string('nama_item');
-            $table->string('status_item');
+            $table->text('gambar_item');
+            $table->tinyInteger('status_item');
+            $table->integer('harga_item');
+            $table->string('deskripsi_item');
             $table->timestamps();
         });
     }

@@ -12,7 +12,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
         <!-- ini link rel google font END -->
         <!-- Custom css hasil experiment Start-->
-        <link rel="stylesheet" type="text/css" href="css/ceeses.css">
+        <!-- cara vinny pake {{asset('css.csss')}} -->
+        <link rel="stylesheet" type="text/css" href="{{asset('css/ceeses.css')}}">
         <!-- Custom css hasil experiment END-->
     </head>
     <style>
@@ -28,15 +29,15 @@
             </button>
             <div class="navbar-collapse collapse justify-content-stretch" id="navbar6">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/asterix">Beranda <span class="sr-only">Home</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/asterix/toko">Toko</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Tentang Kami</a>
-                    </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="/asterix">Beranda <span class="sr-only">Home</span></a>
+                  </li>
+                  <li class="nav-item"></li>
+                      <a class="nav-link" href="/asterix/toko">Toko</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Tentang Kami</a>
+                  </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -47,164 +48,156 @@
             </div>
         </nav>
         <!-- navbar END -->
-
-        <div class="container">
             <!--  -->
 
             <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <!--Content-->
                 <div class="modal-content form-elegant">
+                  <ul class="nav nav-tabs px-4" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="overview-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="sales-tab" data-toggle="tab" href="#daftar" role="tab" aria-controls="daftar" aria-selected="false">Daftar</a>
+                    </li>
+                  </ul>
+                  <div class="modal-body">
                   <!--Header-->
-                  <div class="row">
-                    <div class="col-md-12 grid-margin stretch-card">
-                      <div class="card">
-                        <div class="card-body dashboard-tabs p-0">
-                          <ul class="nav nav-tabs px-4" role="tablist">
-                            <li class="nav-item">
-                              <a class="nav-link active" id="overview-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" id="sales-tab" data-toggle="tab" href="#daftar" role="tab" aria-controls="daftar" aria-selected="false">Daftar</a>
-                            </li>
-                          </ul>
-                          <div class="tab-content py-0 px-0">
-                            <!-- tab login -->
-                            <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-                              <div class="modal-header text-center">
-                                <h3 class="modal-title w-100 dark-grey-text font-weight-bold mt-3" id="myModalLabel"><strong>Login</strong></h3>
-                                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                                </button> -->
+                  <div class="tab-content py-0 px-0">
+                    <!-- tab login -->
+                    <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                      <div class="modal-header text-center">
+                        <h3 class="modal-title w-100 dark-grey-text font-weight-bold mt-3" id="myModalLabel"><strong>Login</strong></h3>
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button> -->
 
-                              </div>
-                              <p style="font-size: 12px; text-align: center!important;" class="text-muted">Silahkan login untuk menggunakan layanan kami!</p>
-                              <!--Body-->
-                              <div class="modal-body mx-4">
-                                <!--Body-->
-                                <div class="md-form mb-3">
-                                    <label class="f14" data-error="wrong" data-success="right" for="email">Alamat Email : </label>
-                                    <input type="email" id="email" class="form-control validate">
-                                </div>
+                      </div>
+                      <p style="font-size: 12px; text-align: center!important;" class="text-muted">Silahkan login untuk menggunakan layanan kami!</p>
+                      <!--Body-->
+                      <div class="modal-body mx-4">
+                        <!--Body-->
+                        <div class="md-form mb-3">
+                            <label class="f14" data-error="wrong" data-success="right" for="email">Alamat Email : </label>
+                            <input type="email" id="email" class="form-control validate">
+                        </div>
 
-                                <div class="md-form pb-3">
-                                    <label class="f14" data-error="wrong" data-success="right" for="Form-pass1">Password : </label>
-                                    <input type="password" id="Form-pass1" class="form-control validate">
-                                  <!-- <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="#" class="blue-text ml-1">
-                                      Password?</a></p> -->
-                                </div>
+                        <div class="md-form pb-3">
+                            <label class="f14" data-error="wrong" data-success="right" for="Form-pass1">Password : </label>
+                            <input type="password" id="Form-pass1" class="form-control validate">
+                          <!-- <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="#" class="blue-text ml-1">
+                              Password?</a></p> -->
+                        </div>
 
-                                <div class="text-center my-3">
-                                  <button type="button" id="btn-login" class="btn btn-outline-dark btn-block btn-rounded z-depth-1a">Login</button>
-                                </div>
-                              </div>
-                              <!--Footer-->
-                              <div style="justify-content: center!important;" class="modal-footer mx-5 pt-3 mb-1">
-                                <p class="font-small grey-text d-flex">Belum punya akun? <a role="tab" aria-controls="daftar" data-toggle="tab" href="#daftar" class="blue-text ml-1">Daftar disini</a></p>
-                              </div>
-                            </div>
+                        <div class="text-center my-3">
+                          <button type="button" id="btn-login" class="btn btn-outline-dark btn-block btn-rounded z-depth-1a">Login</button>
+                        </div>
+                      </div>
+                      <!--Footer-->
+                      <div style="justify-content: center!important;" class="modal-footer mx-5 pt-3 mb-1">
+                        <p class="font-small grey-text d-flex">Belum punya akun? <a role="tab" aria-controls="daftar" data-toggle="tab" href="#daftar" class="blue-text ml-1">Daftar disini</a></p>
+                      </div>
+                    </div>
 
-                            <!-- tab daftar -->
-                            <div class="tab-pane fade" id="daftar" role="tabpanel" aria-labelledby="daftar-tab">
-                              <div class="modal-header text-center">
-                                <h3 class="modal-title w-100 dark-grey-text font-weight-bold mt-3" id="myModalLabel"><strong>Daftar</strong></h3>
-                                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                                </button> -->
-                              </div>
-                              <p style="font-size: 12px; text-align: center!important;" class="text-muted">Silahkan daftar jika tidak memiliki akun!</p>
-                              <!--Body-->
-                              <div class="modal-body mx-4">
-                                <!--Body-->
-                                <div class="md-form mb-3">
-                                    <label class="f14" data-error="wrong" data-success="right" for="email">Alamat Email : </label>
-                                    <input type="email" id="email" class="form-control validate">
-                                </div>
+                    <!-- tab daftar -->
+                    <div class="tab-pane fade" id="daftar" role="tabpanel" aria-labelledby="daftar-tab">
+                      <div class="modal-header text-center">
+                        <h3 class="modal-title w-100 dark-grey-text font-weight-bold mt-3" id="myModalLabel"><strong>Daftar</strong></h3>
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button> -->
+                      </div>
+                      <p style="font-size: 12px; text-align: center!important;" class="text-muted">Silahkan daftar jika tidak memiliki akun!</p>
+                      <!--Body-->
+                      <div class="modal-body mx-4">
+                        <!--Body-->
+                        <div class="md-form mb-3">
+                            <label class="f14" data-error="wrong" data-success="right" for="email">Alamat Email : </label>
+                            <input type="email" id="email" class="form-control validate">
+                        </div>
 
-                                <div class="md-form pb-3">
-                                    <label class="f14" data-error="wrong" data-success="right" for="Form-pass1">Password : </label>
-                                    <input type="password" id="Form-pass1" class="form-control validate">
-                                  <!-- <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="#" class="blue-text ml-1">
-                                      Password?</a></p> -->
-                                </div>
+                        <div class="md-form pb-3">
+                            <label class="f14" data-error="wrong" data-success="right" for="Form-pass1">Password : </label>
+                            <input type="password" id="Form-pass1" class="form-control validate">
+                          <!-- <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="#" class="blue-text ml-1">
+                              Password?</a></p> -->
+                        </div>
 
-                                <div class="md-form pb-3">
-                                    <label class="f14" data-error="wrong" data-success="right" for="Form-pass1"> Konfirmasi Password : </label>
-                                    <input type="password" id="Form-pass1" class="form-control validate">
-                                  <!-- <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="#" class="blue-text ml-1">
-                                      Password?</a></p> -->
-                                </div>
+                        <div class="md-form pb-3">
+                            <label class="f14" data-error="wrong" data-success="right" for="Form-pass1"> Konfirmasi Password : </label>
+                            <input type="password" id="Form-pass1" class="form-control validate">
+                          <!-- <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="#" class="blue-text ml-1">
+                              Password?</a></p> -->
+                        </div>
 
-                                <div class="text-center my-3">
-                                  <button type="button" id="btn-daftar" class="btn btn-outline-dark btn-block btn-rounded z-depth-1a">Daftar</button>
-                                </div>
-                              </div>
-                              <!--Footer-->
-                            </div>
-                            <div class="tab-pane fade" id="purchases" role="tabpanel" aria-labelledby="purchases-tab">
-                              <div class="d-flex flex-wrap justify-content-xl-between">
-                                <div class="d-none d-xl-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
-                                  <i class="mdi mdi-calendar-heart icon-lg mr-3 text-primary"></i>
-                                  <div class="d-flex flex-column justify-content-around">
-                                    <small class="mb-1 text-muted">Start date</small>
-                                    <div class="dropdown">
-                                      <a class="btn btn-secondary dropdown-toggle p-0 bg-transparent border-0 text-dark shadow-none font-weight-medium" href="#" role="button" id="dropdownMenuLinkA" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <h5 class="mb-0 d-inline-block">26 Jul 2018</h5>
-                                      </a>
-                                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkA">
-                                        <a class="dropdown-item" href="#">12 Aug 2018</a>
-                                        <a class="dropdown-item" href="#">22 Sep 2018</a>
-                                        <a class="dropdown-item" href="#">21 Oct 2018</a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
-                                  <i class="mdi mdi-currency-usd mr-3 icon-lg text-danger"></i>
-                                  <div class="d-flex flex-column justify-content-around">
-                                    <small class="mb-1 text-muted">Revenue</small>
-                                    <h5 class="mr-2 mb-0">$577545</h5>
-                                  </div>
-                                </div>
-                                <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
-                                  <i class="mdi mdi-eye mr-3 icon-lg text-success"></i>
-                                  <div class="d-flex flex-column justify-content-around">
-                                    <small class="mb-1 text-muted">Total views</small>
-                                    <h5 class="mr-2 mb-0">9833550</h5>
-                                  </div>
-                                </div>
-                                <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
-                                  <i class="mdi mdi-download mr-3 icon-lg text-warning"></i>
-                                  <div class="d-flex flex-column justify-content-around">
-                                    <small class="mb-1 text-muted">Downloads</small>
-                                    <h5 class="mr-2 mb-0">2233783</h5>
-                                  </div>
-                                </div>
-                                <div class="d-flex py-3 border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
-                                  <i class="mdi mdi-flag mr-3 icon-lg text-danger"></i>
-                                  <div class="d-flex flex-column justify-content-around">
-                                    <small class="mb-1 text-muted">Flagged</small>
-                                    <h5 class="mr-2 mb-0">3497843</h5>
-                                  </div>
-                                </div>
+                        <div class="text-center my-3">
+                          <button type="button" id="btn-daftar" class="btn btn-outline-dark btn-block btn-rounded z-depth-1a">Daftar</button>
+                        </div>
+                      </div>
+                      <!--Footer-->
+                    </div>
+                    <div class="tab-pane fade" id="purchases" role="tabpanel" aria-labelledby="purchases-tab">
+                      <div class="d-flex flex-wrap justify-content-xl-between">
+                        <div class="d-none d-xl-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                          <i class="mdi mdi-calendar-heart icon-lg mr-3 text-primary"></i>
+                          <div class="d-flex flex-column justify-content-around">
+                            <small class="mb-1 text-muted">Start date</small>
+                            <div class="dropdown">
+                              <a class="btn btn-secondary dropdown-toggle p-0 bg-transparent border-0 text-dark shadow-none font-weight-medium" href="#" role="button" id="dropdownMenuLinkA" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <h5 class="mb-0 d-inline-block">26 Jul 2018</h5>
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkA">
+                                <a class="dropdown-item" href="#">12 Aug 2018</a>
+                                <a class="dropdown-item" href="#">22 Sep 2018</a>
+                                <a class="dropdown-item" href="#">21 Oct 2018</a>
                               </div>
                             </div>
+                          </div>
+                        </div>
+                        <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                          <i class="mdi mdi-currency-usd mr-3 icon-lg text-danger"></i>
+                          <div class="d-flex flex-column justify-content-around">
+                            <small class="mb-1 text-muted">Revenue</small>
+                            <h5 class="mr-2 mb-0">$577545</h5>
+                          </div>
+                        </div>
+                        <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                          <i class="mdi mdi-eye mr-3 icon-lg text-success"></i>
+                          <div class="d-flex flex-column justify-content-around">
+                            <small class="mb-1 text-muted">Total views</small>
+                            <h5 class="mr-2 mb-0">9833550</h5>
+                          </div>
+                        </div>
+                        <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                          <i class="mdi mdi-download mr-3 icon-lg text-warning"></i>
+                          <div class="d-flex flex-column justify-content-around">
+                            <small class="mb-1 text-muted">Downloads</small>
+                            <h5 class="mr-2 mb-0">2233783</h5>
+                          </div>
+                        </div>
+                        <div class="d-flex py-3 border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                          <i class="mdi mdi-flag mr-3 icon-lg text-danger"></i>
+                          <div class="d-flex flex-column justify-content-around">
+                            <small class="mb-1 text-muted">Flagged</small>
+                            <h5 class="mr-2 mb-0">3497843</h5>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                </div>
                 <!--/.Content-->
               </div>
             </div>
             <!--  -->
             @yield("content")
-        </div>
+
         <!-- ini custom footer dari MDBootstrap. Sumber : https://mdbootstrap.com/docs/standard/navigation/footer/ -->
         <footer class="text-lg-start bg-white text-muted">
           <!-- Section: Social media -->
-          <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+          <section class="d-flex justify-content-center justify-content-lg-between p-4 border-top border-bottom">
             <!-- Left -->
             <div style="margin-left: 1.25rem !important;" class="me-5 d-none d-lg-block">
               <span>Ayo terhubung dengan kami!</span>

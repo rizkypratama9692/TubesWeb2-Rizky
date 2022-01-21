@@ -1,17 +1,18 @@
 /*ini buat apply font dari google font*/
 
 /*css buat disable horizontal scroll soalnya ada glitch gj. Sumber : https://stackoverflow.com/questions/17756649/disable-the-horizontal-scroll*/
-html, body {
+/* html, body {
     max-width: 100%;
     overflow-x: hidden;
-}
+} */
 
 /*ini css carousel dari BootstrapCreative. Sumber : https://bootstrapcreative.com/pattern/full-width-carousel-responsive-images/*/
-.container, .container-lg, .container-md, .container-sm, .container-xl {
+/* .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 100%;
     padding-right: 0px;
     padding-left: 0px;
-}
+} */
+
 /*
 Removes white gap between slides - chagnge to base color of slide images
 */
@@ -59,9 +60,10 @@ anchors are inline so you need ot make them block to go full width
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 1.25rem 1rem;
-    box-shadow: 10px 10px 37px 0px rgba(0,0,0,0.26);
-    -webkit-box-shadow: 10px 10px 37px 0px rgba(0,0,0,0.26);
-    -moz-box-shadow: 10px 10px 37px 0px rgba(0,0,0,0.26);
+    /* drop shadow navbar yg enakeun ga tebel teuing,  */
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
 }
 .navbar-brand {
     display: inline-block;
@@ -119,11 +121,18 @@ a {
     color: #495057;
     /* background-color: #fff; */
     /* background-clip: padding-box; */
-    outline: none;
-    border: none;
+    /* disable boudning box outline, border : unset. Belajar dari falih */
+    outline: unset; 
+    border: unset;
     border-bottom: 1px solid #ced4da!important;
     border-radius: 0px!important;
     /* transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; */
+}
+
+.form-control:focus {
+    outline: unset;
+    border: unset;
+    box-shadow: unset;
 }
 
 .inp {
@@ -194,3 +203,39 @@ a {
 .f14 {
     font-size: 14px!important;
 }
+
+/*css list produk sumber dari : https://bootsnipp.com/snippets/R5r9A*/
+
+.card-product .img-wrap {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+    position: relative;
+    height: 220px;
+    text-align: center;
+}
+.card-product .img-wrap img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+.card-product .info-wrap {
+    overflow: hidden;
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+.card-product .bottom-wrap {
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+.label-rating { margin-right:10px;
+    color: #333;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.card-product .price-old {
+    color: #999;
+}
+
+/*css list produk end*/
