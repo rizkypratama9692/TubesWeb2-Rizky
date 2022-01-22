@@ -23,4 +23,8 @@ Route::get('/', function () {
 // Route::resource('asterix', AsterixController::class);
 Route::get('/asterix', 'AsterixController@index');
 Route::get('/asterix/toko', 'AsterixController@toko');
+
+// ini routing buat proses daftar pake route::post
+Route::post('daftar', 'AsterixController@register');
+
 ?>

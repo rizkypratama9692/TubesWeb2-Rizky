@@ -3,15 +3,7 @@
 $i=1;
 @endphp
 @foreach($dataSemua as $datas)
-    
-        {{-- {{/*$i*/}} --}}
-        {{-- {{/*$datas['jenis_item']*/}} --}}
-        {{-- {{/*$datas['nama_item']*/}} --}}
-        {{-- {{/*$datas['status_item']*/}} --}}
-        {{-- {{/*$datas['harga_item']*/}} --}}
-        {{-- {{/* $datas['deskripsi_item'] */}} --}}
-
-    <div class="col-4 cursor-pointer">
+    <div data-bs-toggle="modal" data-bs-target="#modal-form" class="col-4 cursor-pointer">
         <figure class="card card-product">
             <div class="img-wrap"><img src={{ asset('img/'.$datas['gambar_item']) }}></div>
             <figcaption class="info-wrap">
@@ -33,3 +25,6 @@ $i=1;
     </div>
 @endforeach
 </div>
+
+<!-- ini teh paginate, reference: -->
+{{ $dataSemua->links() }}

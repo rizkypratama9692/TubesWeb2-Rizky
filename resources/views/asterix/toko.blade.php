@@ -8,21 +8,25 @@
 <link rel="stylesheet" type="text/css" href="{{asset('css/ceeses.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('css/sidebars.css')}}">
 <style>
+    /* jang disable border di tab jenis item */
   #toko .nav-tabs {
     border: unset
   }
 
+  /* jarak tab jenis item */
   #toko .nav-tabs .nav-item {
     padding: 0 3px;
   }
 
+  /* bgcolor nav tab disable */
   #toko .nav-tabs .nav-link {
-    background: #efefef;
+    background: #fff;
   }
-
+  /* bgcolor nav tab aktif */
   #toko .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    background: #fff !important;
+    background: #efefef !important;
     border-color: transparent transparent transparent;
+    border-radius: 10px;
   }
 </style>
 <!-- ini link rel google font END -->

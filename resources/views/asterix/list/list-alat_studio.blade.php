@@ -11,7 +11,7 @@ $i=1;
         {{-- {{/*$datas['harga_item']*/}} --}}
         {{-- {{/* $datas['deskripsi_item'] */}} --}}
 
-    <div class="col-4 cursor-pointer">
+    <div data-bs-toggle="modal" data-bs-target="#modal-form" class="col-4 cursor-pointer">
         <figure class="card card-product">
             <div class="img-wrap"><img src={{ asset('img/'.$datas['gambar_item']) }}></div>
             <figcaption class="info-wrap">
