@@ -43,7 +43,15 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <!-- <a style="margin-right:1rem;" class="btn btn-outline-dark" href="#">Login</a> -->
+                        @if (Auth::check() == 1)
+                        <button type="button" class="btn btn-outline-dark">{{ Auth::user()->name }}</button>
+                        <form method="post" action={{ url("keluar") }}>
+                          <button type="submit" class="btn btn-outline-danger">Logout</button> 
+                        </form>
+                        
+                        @else
                         <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#modal-login">Login</button>
+                        @endif
                         @include("layouts.modals.modal")
                     </li>
                 </ul>

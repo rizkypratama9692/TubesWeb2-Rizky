@@ -26,5 +26,6 @@ Route::get('/asterix/toko', 'AsterixController@toko');
 
 // ini routing buat proses daftar pake route::post
 Route::post('daftar', 'AsterixController@register');
-
+Route::post('masuk', 'AsterixController@authenticate');
+Route::post('keluar', 'AsterixController@logout');
 ?>

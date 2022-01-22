@@ -6,6 +6,7 @@ use App\item;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class AsterixController extends Controller
 {
@@ -44,5 +45,22 @@ class AsterixController extends Controller
         ]);
 
         return back()->with("success", "Akun berhasil dibuat");
+    }
+
+    // dapet dari dokumentasi larapel genep
+    public function authenticate(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            // Authentication passed...
+            return redirect("/asterix");
+        }
+    }
+
+    // /pungsi logot dari dokumentasi larapel genep
+    public function logout(){
+        Auth::logout();
+        return view("asterix.index");
     }
 }

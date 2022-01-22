@@ -21,15 +21,16 @@
             <p style="font-size: 12px; text-align: center!important;" class="text-muted">Silahkan login untuk menggunakan layanan kami!</p>
   
             <div class="modal-body mx-4">
-              <form>
+              <form method="post" action={{ url("masuk") }}>
+                @csrf
                 <div class="md-form mb-3">
                     <label class="f14" data-error="wrong" data-success="right" for="email">Alamat Email : </label>
-                    <input type="email" id="email" class="form-control validate">
+                    <input type="email" id="email" class="form-control validate" name="email">
                 </div>
 
                 <div class="md-form pb-3">
                     <label class="f14" data-error="wrong" data-success="right" for="Form-pass1">Password : </label>
-                    <input type="password" id="Form-pass1" class="form-control validate">
+                    <input type="password" id="Form-pass1" class="form-control validate" name="password">
                 </div>
 
                 <div class="text-center my-3">

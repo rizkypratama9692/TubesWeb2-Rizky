@@ -62,6 +62,8 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
+
+    //  dapet dari dokumentasi larapel genep
     protected function create(array $data)
     {
         $user = User::create([
