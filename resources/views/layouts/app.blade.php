@@ -46,6 +46,8 @@
                         @if (Auth::check() == 1)
                         <button type="button" class="btn btn-outline-dark">{{ Auth::user()->name }}</button>
                         <form method="post" action={{ url("keluar") }}>
+                          <!-- @csrf buat logout bug fix -->
+                          @csrf
                           <button type="submit" class="btn btn-outline-danger">Logout</button> 
                         </form>
                         
