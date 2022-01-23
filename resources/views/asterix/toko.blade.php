@@ -22,12 +22,31 @@
   #toko .nav-tabs .nav-link {
     background: #fff;
   }
-  /* bgcolor nav tab aktif */
+
+  /*  nav link aktif */
+
   #toko .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     background: #efefef !important;
-    border-color: transparent transparent transparent;
+    border-color: transparent!important;
+    color: #000!important;
     border-radius: 10px;
   }
+  
+  /* nav link nonaktif */
+  #toko .navbar-light .navbar-nav .nav-link {
+    /* color: rgba(0,0,0,.1)!important; */
+    border-color: unset!important;
+  }
+
+  /* navbar link teks */
+  #toko .nav-link {
+    color: rgba(0,0,0,.4);
+  }
+  
+  #toko .nav-tabs .nav-link:hover{
+    border-color: transparent!important;
+  }
+
 </style>
 <!-- ini link rel google font END -->
 
@@ -62,6 +81,17 @@
     </div>
 </div>
 @include ('asterix.modals.modal-form')
-<!-- list product dari https://bootsnipp.com/snippets/R5r9A -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+@endsection
+
+@section('script')
+  <!-- list product dari https://bootsnipp.com/snippets/R5r9A -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <!-- ini buat ambil data dari list-...blade.php terus di tampilin di modal masing masing berdasarkan id kata falih -->
+  <script>
+    function getDataPerItem(nama, gambar, harga, deskripsi, id) {
+      document.getElementById('nama-item').innerHTML = nama
+      document.getElementById('gambar-item').src = '/img/' + gambar
+      document.getElementById('deskripsi-item').value = deskripsi
+    }
+  </script>
 @endsection

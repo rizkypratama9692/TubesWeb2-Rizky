@@ -17,7 +17,38 @@
         <!-- Custom css hasil experiment END-->
     </head>
     <style>
+        #modal-login .nav-tabs {
+          border: unset!important;
+        }
+        /* buat hover navtab */
+        #modal-login .nav-tabs .nav-link:hover{
+          border-color: transparent!important;
+        }
+
+        /* ini nav link nonaktif */
+        #modal-login .navbar-light .navbar-nav .nav-link {
+          color: rgba(0,0,0,.1)!important;
+          border-color: unset!important;
+        }
         
+        /* ini nav link aktif */
+        #modal-login .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+          border-color: transparent!important;
+          color: #000!important;
+        }
+
+        #modal-login .nav-tabs {
+          
+        }
+
+        #modal-login .nav-tabs .nav-link {
+          background: #fff;
+        }
+        
+        #modal-login .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+          background: #fff !important;
+          border-color: transparent transparent transparent;
+        }
     </style>
 
     <body>
@@ -43,10 +74,11 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <!-- <a style="margin-right:1rem;" class="btn btn-outline-dark" href="#">Login</a> -->
+                        <!-- auth::check teh buat ngecek session -->
                         @if (Auth::check() == 1)
                         <button type="button" class="btn btn-outline-dark">{{ Auth::user()->name }}</button>
                         <form method="post" action={{ url("keluar") }}>
-                          <!-- @csrf buat logout bug fix -->
+                          <!-- @csrf buat logout bug fix  dari https://laravel.com/docs/6.x/csrf -->
                           @csrf
                           <button type="submit" class="btn btn-outline-danger">Logout</button> 
                         </form>
@@ -234,5 +266,6 @@
               });
             }
         </script>
+        @yield('script')
     <!-- Kumpulan js END -->
 </html>

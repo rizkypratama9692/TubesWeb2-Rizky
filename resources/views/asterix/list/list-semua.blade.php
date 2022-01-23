@@ -3,7 +3,7 @@
 $i=1;
 @endphp
 @foreach($dataSemua as $datas)
-    <div data-bs-toggle="modal" data-bs-target="#modal-form" class="col-4 cursor-pointer">
+    <div data-bs-toggle="modal" data-bs-target="#modal-form" class="col-4 cursor-pointer" onclick="getDataPerItem('{{$datas->nama_item}}', '{{$datas->gambar_item}}', '{{$datas->harga_item}}', '{{$datas->deskripsi_item}}', '{{$datas->id}}')">
         <figure class="card card-product">
             <div class="img-wrap"><img src={{ asset('img/'.$datas['gambar_item']) }}></div>
             <figcaption class="info-wrap">

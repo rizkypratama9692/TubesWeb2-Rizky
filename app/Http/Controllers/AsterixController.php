@@ -58,9 +58,13 @@ class AsterixController extends Controller
         }
     }
 
+    public function ngitung(){
+        
+    }
+
     // /pungsi logot dari dokumentasi larapel genep
     public function logout(){
         Auth::logout();
-        return view("asterix.index");
+        // return view("asterix.index");
     }
 }

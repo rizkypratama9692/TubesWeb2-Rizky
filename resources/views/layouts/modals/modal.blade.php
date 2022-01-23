@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <!--Content-->
       <div class="modal-content form-elegant">
-        <ul class="nav nav-tabs px-4" role="tablist">
+        <ul class="nav nav-tabs px-4" role="tablist" style="justify-content: center;">
           <li class="nav-item">
             <a class="nav-link active" id="overview-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
           </li>

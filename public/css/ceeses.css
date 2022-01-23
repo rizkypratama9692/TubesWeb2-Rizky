@@ -196,7 +196,7 @@ a {
     border-top-right-radius: calc(0.3rem - 1px);
 }
 
-.modal-dialog {
+#modal-login .modal-dialog {
     max-width: 450px;
     margin: 1.75rem auto;
 }
