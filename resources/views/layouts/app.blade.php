@@ -46,7 +46,7 @@
         }
         
         #modal-login .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-          background: #fff !important;
+          background: #fff;
           border-color: transparent transparent transparent;
         }
     </style>
@@ -76,7 +76,7 @@
                         <!-- <a style="margin-right:1rem;" class="btn btn-outline-dark" href="#">Login</a> -->
                         <!-- auth::check teh buat ngecek session -->
                         @if (Auth::check() == 1)
-                        <button type="button" class="btn btn-outline-dark">{{ Auth::user()->name }}</button>
+                        <!-- <button type="button" class="btn btn-outline-dark">{{ Auth::user()->name }}</button> -->
                         <form method="post" action={{ url("keluar") }}>
                           <!-- @csrf buat logout bug fix  dari https://laravel.com/docs/6.x/csrf -->
                           @csrf

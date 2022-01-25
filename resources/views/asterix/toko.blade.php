@@ -10,7 +10,7 @@
 <style>
     /* jang disable border di tab jenis item */
   #toko .nav-tabs {
-    border: unset
+    border: unset;
   }
 
   /* jarak tab jenis item */
@@ -20,17 +20,23 @@
 
   /* bgcolor nav tab disable */
   #toko .nav-tabs .nav-link {
-    background: #fff;
+    background: #efefef;
+    /* box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1); */
+    border-radius: 10px;
   }
 
   /*  nav link aktif */
 
   #toko .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    background: #efefef !important;
+    background: #000 !important;
     border-color: transparent!important;
-    color: #000!important;
+    color: #fff!important;
     border-radius: 10px;
   }
+
+  /* #modal-login .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background: #fff!important;
+  } */
   
   /* nav link nonaktif */
   #toko .navbar-light .navbar-nav .nav-link {
@@ -47,11 +53,23 @@
     border-color: transparent!important;
   }
 
+  .badge {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.8rem!important;
+    font-weight: 500!important;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+  } 
 </style>
 <!-- ini link rel google font END -->
 
 <div class="my-5 container" id="toko">
-    <ul class="nav nav-tabs mb-5 justify-content-center" id="myTab" role="tablist">
+    <ul class="nav nav-tabs mb-5 justify-content-center" id="" role="tablist">
     <li class="nav-item" role="presentation">
         <button class="nav-link active" id="semua-tab" data-bs-toggle="tab" data-bs-target="#semua" type="button" role="tab" aria-selected="true">Semua</button>
     </li>
@@ -71,16 +89,21 @@
         </div>
         <div class="tab-pane fade" id="ruang-studio" role="tabpanel" aria-labelledby="ruang-studio-tab"> 
             @include('asterix.list.list-ruang_studio')
+            
         </div>
         <div class="tab-pane fade" id="alat-studio" role="tabpanel" aria-labelledby="alat-studio-tab"> 
             @include('asterix.list.list-alat_studio')
         </div>
         <div class="tab-pane fade" id="alat-musik" role="tabpanel" aria-labelledby="alat-musik-tab">
             @include('asterix.list.list-alat_musik')
+            
         </div>
     </div>
 </div>
-@include ('asterix.modals.modal-form')
+@include ('asterix.modals.modal-ruang_studio')
+@include ('asterix.modals.modal-alat_musik')
+@include ('asterix.modals.modal-alat_studio')
+@include ('asterix.modals.modal-semua')
 @endsection
 
 @section('script')

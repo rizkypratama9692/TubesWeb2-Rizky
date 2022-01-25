@@ -77,6 +77,9 @@
               </form>
             </div>
             <!--Footer-->
+            <div style="justify-content: center!important;" class="modal-footer mx-5 pt-3 mb-1">
+              <p class="font-small grey-text d-flex">Lu setuju ama <a role="tab" aria-controls="daftar" data-toggle="tab" href="#daftar" class="blue-text ml-1">ketentuan kami</a></p>
+            </div>
           </div>
         </div>
       </div>
