@@ -96,7 +96,6 @@
         </div>
         <div class="tab-pane fade" id="alat-musik" role="tabpanel" aria-labelledby="alat-musik-tab">
             @include('asterix.list.list-alat_musik')
-            
         </div>
     </div>
 </div>

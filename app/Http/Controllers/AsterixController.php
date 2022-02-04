@@ -60,7 +60,7 @@ class AsterixController extends Controller
             // return redirect nampilin halaman pake url routing
         }
     }
-
+    
     public function ngitung(){
         return view ('asterix.struk');
     }
