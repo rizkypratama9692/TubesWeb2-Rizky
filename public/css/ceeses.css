@@ -240,3 +240,105 @@ a {
 }
 
 /*css list produk end*/
+
+/* jang disable border di tab jenis item */
+#toko .nav-tabs {
+    border: unset;
+  }
+
+  /* jarak tab jenis item */
+  #toko .nav-tabs .nav-item {
+    padding: 0 3px;
+  }
+
+  /* bgcolor nav tab disable */
+  #toko .nav-tabs .nav-link {
+    background: #efefef;
+    /* box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1); */
+    border-radius: 10px;
+  }
+
+  /*  nav link aktif */
+
+  #toko .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background: #000 !important;
+    border-color: transparent!important;
+    color: #fff!important;
+    border-radius: 10px;
+  }
+
+  /* #modal-login .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background: #fff!important;
+  } */
+  
+  /* nav link nonaktif */
+  #toko .navbar-light .navbar-nav .nav-link {
+    /* color: rgba(0,0,0,.1)!important; */
+    border-color: unset!important;
+  }
+
+  /* navbar link teks */
+  #toko .nav-link {
+    color: rgba(0,0,0,.4);
+  }
+  
+  #toko .nav-tabs .nav-link:hover{
+    border-color: transparent!important;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.8rem!important;
+    font-weight: 500!important;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+  } 
+
+  #tabel .nav-tabs {
+    border: unset;
+  }
+
+  /* jarak tab jenis item */
+  #tabel .nav-tabs .nav-item {
+    padding: 0 3px;
+  }
+
+  /* bgcolor nav tab disable */
+  #tabel .nav-tabs .nav-link {
+    background: #efefef;
+    /* box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1); */
+    border-radius: 10px;
+  }
+
+  /*  nav link aktif */
+
+  #tabel .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background: #000 !important;
+    border-color: transparent!important;
+    color: #fff!important;
+    border-radius: 10px;
+  }
+
+  /* #modal-login .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background: #fff!important;
+  } */
+  
+  /* nav link nonaktif */
+  #tabel .navbar-light .navbar-nav .nav-link {
+    /* color: rgba(0,0,0,.1)!important; */
+    border-color: unset!important;
+  }
+
+  /* navbar link teks */
+  #tabel .nav-link {
+    color: rgba(0,0,0,.4);
+  }
+  
+  #tabel .nav-tabs .nav-link:hover{
+    border-color: transparent!important;
+  }

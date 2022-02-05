@@ -12,7 +12,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach ($dataRuangStudio as $item)
+        @foreach ($dataAlatMusik as $item)
             <tr> 
                 <td> {{ $no++ }} </td>
                 <td> {{ $item->jenis_item }} </td>

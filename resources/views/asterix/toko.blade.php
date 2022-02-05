@@ -6,66 +6,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{{asset('css/ceeses.css')}}">
-<link rel="stylesheet" type="text/css" href="{{asset('css/sidebars.css')}}">
-<style>
-    /* jang disable border di tab jenis item */
-  #toko .nav-tabs {
-    border: unset;
-  }
-
-  /* jarak tab jenis item */
-  #toko .nav-tabs .nav-item {
-    padding: 0 3px;
-  }
-
-  /* bgcolor nav tab disable */
-  #toko .nav-tabs .nav-link {
-    background: #efefef;
-    /* box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1); */
-    border-radius: 10px;
-  }
-
-  /*  nav link aktif */
-
-  #toko .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    background: #000 !important;
-    border-color: transparent!important;
-    color: #fff!important;
-    border-radius: 10px;
-  }
-
-  /* #modal-login .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    background: #fff!important;
-  } */
-  
-  /* nav link nonaktif */
-  #toko .navbar-light .navbar-nav .nav-link {
-    /* color: rgba(0,0,0,.1)!important; */
-    border-color: unset!important;
-  }
-
-  /* navbar link teks */
-  #toko .nav-link {
-    color: rgba(0,0,0,.4);
-  }
-  
-  #toko .nav-tabs .nav-link:hover{
-    border-color: transparent!important;
-  }
-
-  .badge {
-    display: inline-block;
-    padding: 0.35em 0.65em;
-    font-size: 0.8rem!important;
-    font-weight: 500!important;
-    line-height: 1;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: 0.25rem;
-  } 
-</style>
 <!-- ini link rel google font END -->
 
 <div class="my-5 container" id="toko">
@@ -74,7 +14,7 @@
         <button class="nav-link active" id="semua-tab" data-bs-toggle="tab" data-bs-target="#semua" type="button" role="tab" aria-selected="true">Semua</button>
     </li>
     <li class="nav-item" role="presentation">
-        <button class="nav-link" id="ruang-studio-tab" data-bs-toggle="tab" data-bs-target="#ruang-studio" type="button" role="tab" aria-selected="true">Ruang Studio</button>
+        <button class="nav-link" id="ruang-studio-tab" data-bs-toggle="tab" data-bs-target="#ruang-studio" type="button" role="tab" aria-selected="false">Ruang Studio</button>
      </li>
       <li class="nav-item" role="presentation">
         <button class="nav-link" id="alat-studio-tab" data-bs-toggle="tab" data-bs-target="#alat-studio" type="button" role="tab" aria-selected="false">Alat Studio</button>
@@ -108,12 +48,4 @@
 @section('script')
   <!-- list product dari https://bootsnipp.com/snippets/R5r9A -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  <!-- ini buat ambil data dari list-...blade.php terus di tampilin di modal masing masing berdasarkan id kata falih -->
-  <script>
-    function getDataPerItem(nama, gambar, harga, deskripsi, id) {
-      document.getElementById('nama-item').innerHTML = nama
-      document.getElementById('gambar-item').src = '/img/' + gambar
-      document.getElementById('deskripsi-item').value = deskripsi
-    }
-  </script>
 @endsection
