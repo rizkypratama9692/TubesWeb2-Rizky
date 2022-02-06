@@ -28,9 +28,15 @@ Route::get('/asterix/admin/alat', 'AsterixController@admin_alat');
 Route::get('/asterix/admin/alat/tambah', 'AsterixController@tambah_item');
 Route::get('/asterix/admin/alat/edit/{id}', 'AsterixController@edit_item');
 
+// get buat ngambil data / read data
+
 // ini routing buat proses daftar pake route::post
 Route::post('daftar', 'AsterixController@register');
 Route::post('masuk', 'AsterixController@authenticate');
 Route::post('keluar', 'AsterixController@logout');
 Route::post('tambah', 'AsterixController@store');
+// post buat nge create
+Route::patch('edit/{id}', 'AsterixController@update');
+// patch method buat edit
+Route::post('bayar', 'AsterixController@bayar');
 ?>

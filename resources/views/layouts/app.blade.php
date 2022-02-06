@@ -67,6 +67,8 @@
                   <li class="nav-item"></li>
                       <a class="nav-link" href="/asterix/toko">Toko</a>
                   </li>
+                  @if (Auth::check())
+                    @if (Auth::user()->role=='admin')
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Admin
@@ -77,6 +79,8 @@
                       <li><a class="dropdown-item" href="#">Pembayaran</a></li>
                     </ul>
                   </li>
+                    @endif
+                  @endif
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">

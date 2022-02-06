@@ -36,25 +36,28 @@ $i=1;
           <div class="text w-100 py-3">
           <!-- <span class="subheading">Booking an Appointment</span> -->
           <h3 class="mb-4 heading">{{ $datas['nama_item'] }}</h3>
-          <form action="" class="contact-form">
-            <div class="form-group mb-3">
-              <input type="text" class="form-control" placeholder="Full Name">
-            </div>
-            <div class="form-group mb-3">
-              <input type="text" class="form-control" placeholder="Email address">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Subject">
-            </div>
+          <form action="{{url('/asterix/struk')}}" method="GET" class="contact-form">
+            <textarea name="" id="" cols="30" rows="4" class="form-control" placeholder="Message">{{ $datas['deskripsi_item'] }}</textarea>
+            @if (Auth::check() == 1)
+            <input type="hidden" name="id" value="{{ $datas['id'] }}">
+            <input type="hidden" name="nama_item" value="{{ $datas['nama_item'] }}">
+            <input type="hidden" name="deskripsi_item" value="{{ $datas['deskripsi_item'] }}">
+            <input type="hidden" name="harga_item" value="{{ $datas['harga_item'] }}">
+            
             <div class="form-group">
             <!-- <textarea name="" id="" cols="30" rows="4" class="form-control" placeholder="Message"></textarea> -->
-              <select class="form-select" aria-label="Default select example">
-                <option value="2" selected>2 Jam</option>
+              <select name="lama_pinjam" id="lama_pinjam" class="form-select" aria-label="Default select example">
+              <option value="">Silahkan pilih</option>  
+                <option value="2">2 Jam</option>
+                <option value="4">4 Jam</option>
+                <option value="6">6 Jam</option>
+                <option value="8">8 Jam</option>
               </select>
             </div>
             <div class="form-group">
-              <button type="submit" class="form-control btn btn-outline-dark submit px-3">Send Message</button>
+              <button type="submit" class="form-control btn btn-outline-dark submit px-3">Pinjam</button>
             </div>
+            @endif
           </form>
           </div>
           </div>

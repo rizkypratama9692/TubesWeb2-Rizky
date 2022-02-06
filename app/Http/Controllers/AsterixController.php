@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\item;
+use App\Pinjam;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Whoops\Run;
 
 class AsterixController extends Controller
 {
@@ -61,8 +63,30 @@ class AsterixController extends Controller
         }
     }
     
-    public function ngitung(){
-        return view ('asterix.struk');
+    public function ngitung(Request $request){
+        $total = 0;
+        $total = $request->harga_item*$request->lama_pinjam;
+
+        return view ('asterix.struk', [
+            'total' => $total,
+            'data' => $request->all()
+        ]);
+        
+    }
+
+    public function bayar(Request $request){
+        $payload=$request->all();
+        $bayar=Pinjam::create(array_merge($payload, ['nama_user'=>Auth::user()->name]));
+        if($bayar){
+            $item=item::find($payload['id_item']);
+            $item->status_item=1;
+            $item->update();
+            // $item->status_item=1; ini buat set value nya
+            // $item->update(); ini buat ngejalanin perintah update value di kolom
+            return back();
+        }else{
+            return back()->withErrors('error','gagal bayar ok');
+        };
     }
 
     public function admin_alat(){
@@ -99,6 +123,24 @@ class AsterixController extends Controller
         return back()->with('success', 'data berhasil ditambahkan');
     }
     
+    // didalem update ada ($id) soalnya id nya dipanggil di routing
+    public function update(Request $request, $id){
+        // kenapa pake $request->all karena name input sama nama kolom db itu sama
+        // $data = item::find($id);
+        item::where('id', $id)->update([
+            "jenis_item" => $request->jenis_item,
+            "nama_item" => $request->nama_item,
+            "gambar_item" => '',
+            "status_item" => $request->status_item,
+            "harga_item" => $request->harga_item,
+            "harga_item" => $request->harga_item,
+            "deskripsi_item" => $request->deskripsi_item,
+            
+        ]);
+        return back()->with('success', 'data berhasil diedit');
+    }
+
+    // didalem update ada ($id) soalnya id nya dipanggil di routing
     public function edit_item($id){
         $data = item::find($id);
         $optionJenisItem = [

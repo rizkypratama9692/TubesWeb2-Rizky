@@ -6,7 +6,11 @@
 
 <div class="container my-5">
     <div class="card">
-        <form action="" method="POST">
+        <form action="{{url('edit/'.$dataDetail->id)}}" method="POST">
+            @method('PATCH')    
+            @csrf
+            
+            <!-- method patch buat manggil method di route, soalnya di method cuma post sama get. jadi method dari laravel nya harus di deklarisiin sesuai sama yang dipake di rroute  -->
             <div class="card-body">
                 <div class="md-form mb-3">
                     <label class="f14" data-error="wrong" data-success="right" for="-">Jenis item : </label>
