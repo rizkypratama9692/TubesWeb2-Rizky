@@ -67,8 +67,15 @@
                   <li class="nav-item"></li>
                       <a class="nav-link" href="/asterix/toko">Toko</a>
                   </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Tentang Kami</a>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Admin
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="/asterix/admin/alat">Item</a></li>
+                      <li><a class="dropdown-item" href="#">Pengguna</a></li>
+                      <li><a class="dropdown-item" href="#">Pembayaran</a></li>
+                    </ul>
                   </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
@@ -199,7 +206,7 @@
           <!-- Copyright -->
           <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
             © 2021 Copyright:
-            <a class="link text-reset fw-bold" href="#">asterixstudio.com</a>
+            <a class="link text-reset fw-bold" href="#">asterixstudio.id</a>
           </div>
           <!-- Copyright -->
         </footer>
@@ -208,7 +215,7 @@
     <!-- Kumpulan js Start -->
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
         <!-- ini js buat load icon dari font awesome. Sumber : https://fontawesome.com/v5.15/how-to-use/on-the-web/setup/hosting-font-awesome-yourself -->
         <script defer src="/fontawesome/js/all.js"></script> <!--load all styles -->
         <!-- ini js scroll bar custom dari Nicola Spadari. Sumber : https://codepen.io/nicolaspadari/pen/eLMwzb -->

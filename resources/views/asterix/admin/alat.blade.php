@@ -23,6 +23,9 @@
   <li class="nav-item" role="presentation">
     <button class="nav-link" id="alat_musik-tab" data-bs-toggle="tab" data-bs-target="#alat_musik" type="button" role="tab" aria-controls="alat_musik" aria-selected="false">Alat Musik</button>
   </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" href="/asterix/admin/alat/tambah">Tambah item</a>
+  </li>
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="ruang_studio" role="tabpanel" aria-labelledby="ruang_studio-tab">

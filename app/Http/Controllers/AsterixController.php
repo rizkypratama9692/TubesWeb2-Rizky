@@ -87,4 +87,35 @@ class AsterixController extends Controller
         Auth::logout();
         return back();
     }
+
+    public function tambah_item(){
+        return view ('asterix.admin.form.create_item');
+    }
+
+    //Request $request = buat ngambil data inputan dari view
+    public function store(Request $request){
+        $payload = $request->all();
+        item::create($payload);
+        return back()->with('success', 'data berhasil ditambahkan');
+    }
+    
+    public function edit_item($id){
+        $data = item::find($id);
+        $optionJenisItem = [
+            "Alat Musik",
+            "Alat Studio",
+            "Ruang Studio"
+        ];
+
+        $optionStatusItem = [
+            "0",
+            "1"
+        ];
+
+        return view ('asterix.admin.form.edit_item', [
+            'dataDetail' => $data,
+            'jenis' => $optionJenisItem,
+            'status' => $optionStatusItem
+        ]);
+    }
 }

@@ -37,24 +37,24 @@ $i=1;
           <!-- <span class="subheading">Booking an Appointment</span> -->
           <h3 class="mb-4 heading">{{ $datas['nama_item'] }}</h3>
           <form action="" class="contact-form">
-          <div class="form-group mb-3">
-          <input type="text" class="form-control" placeholder="Full Name">
-          </div>
-          <div class="form-group mb-3">
-          <input type="text" class="form-control" placeholder="Email address">
-          </div>
-          <div class="form-group">
-          <input type="text" class="form-control" placeholder="Subject">
-          </div>
-          <div class="form-group">
-          <!-- <textarea name="" id="" cols="30" rows="4" class="form-control" placeholder="Message"></textarea> -->
-          <select class="form-select" aria-label="Default select example">
-            <option value="2" selected>2 Jam</option>
-          </select>
-          </div>
-          <div class="form-group">
-          <button type="submit" class="form-control btn btn-outline-dark submit px-3">Send Message</button>
-          </div>
+            <div class="form-group mb-3">
+              <input type="text" class="form-control" placeholder="Full Name">
+            </div>
+            <div class="form-group mb-3">
+              <input type="text" class="form-control" placeholder="Email address">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Subject">
+            </div>
+            <div class="form-group">
+            <!-- <textarea name="" id="" cols="30" rows="4" class="form-control" placeholder="Message"></textarea> -->
+              <select class="form-select" aria-label="Default select example">
+                <option value="2" selected>2 Jam</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="form-control btn btn-outline-dark submit px-3">Send Message</button>
+            </div>
           </form>
           </div>
           </div>

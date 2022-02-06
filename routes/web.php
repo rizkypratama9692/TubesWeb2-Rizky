@@ -25,10 +25,12 @@ Route::get('/asterix', 'AsterixController@index');
 Route::get('/asterix/toko', 'AsterixController@toko');
 Route::get('/asterix/struk', 'AsterixController@ngitung');
 Route::get('/asterix/admin/alat', 'AsterixController@admin_alat');
+Route::get('/asterix/admin/alat/tambah', 'AsterixController@tambah_item');
+Route::get('/asterix/admin/alat/edit/{id}', 'AsterixController@edit_item');
 
 // ini routing buat proses daftar pake route::post
 Route::post('daftar', 'AsterixController@register');
 Route::post('masuk', 'AsterixController@authenticate');
 Route::post('keluar', 'AsterixController@logout');
-
+Route::post('tambah', 'AsterixController@store');
 ?>
