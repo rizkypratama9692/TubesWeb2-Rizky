@@ -140,6 +140,10 @@ class AsterixController extends Controller
         return back()->with('success', 'data berhasil diedit');
     }
 
+    public function destroy(){
+        
+    }
+
     // didalem update ada ($id) soalnya id nya dipanggil di routing
     public function edit_item($id){
         $data = item::find($id);

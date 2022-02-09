@@ -75,8 +75,8 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="/asterix/admin/alat">Item</a></li>
-                      <li><a class="dropdown-item" href="#">Pengguna</a></li>
-                      <li><a class="dropdown-item" href="#">Pembayaran</a></li>
+                      <li><a class="dropdown-item" href="/asterix/admin/user">Pengguna</a></li>
+                      <li><a class="dropdown-item" href="/asterix/admin/pinjam">Data pinjam</a></li>
                     </ul>
                   </li>
                     @endif

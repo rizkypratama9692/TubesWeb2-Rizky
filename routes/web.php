@@ -27,7 +27,8 @@ Route::get('/asterix/struk', 'AsterixController@ngitung');
 Route::get('/asterix/admin/alat', 'AsterixController@admin_alat');
 Route::get('/asterix/admin/alat/tambah', 'AsterixController@tambah_item');
 Route::get('/asterix/admin/alat/edit/{id}', 'AsterixController@edit_item');
-
+Route::get('/asterix/admin/user', 'userController@user');
+Route::get('/asterix/admin/pinjam', 'pinjamController@pinjam');
 // get buat ngambil data / read data
 
 // ini routing buat proses daftar pake route::post
